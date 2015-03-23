@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" href="jquery.countdown.css">
+<style type="text/css">
+body {margin: 0; padding: 0;}
+#defaultCountdown { width: 247px; height: 200px; background-color: #39853f; color: #fff; font-family:Arial, Helvetica, sans-serif; padding: 5px;}
+.countdown-section { margin-top: 50px;}
+.countdown-amount { font-weight: bold;}
+.countdown-period { font-size: 10px; color: yellow;}
+.countdown-descr { padding-top: 20px;}
+</style>
+<script src="jquery.min.js"></script>
+<script src="jquery.plugin.min.js"></script>
+<script src="jquery.countdown.min.js"></script>
+<script src="jquery.countdown-fr.js"></script>
+<script>
+$(function () {
+	var newYear = new Date();
+	newYear = new Date(newYear.getFullYear(), 12 - 9, 1);
+	$('#defaultCountdown').countdown({until: newYear, description: 'Avant la fermeture des inscriptions.'});
+
+});
+</script>
+</head>
+<body>
+<div id="defaultCountdown"></div>
+</body>
+</html>
